@@ -1,0 +1,5 @@
+# Biblioteci necesare
+Flask
+Flask-SQLAlchemy
+Flask-Migrate
+python-dotenv
