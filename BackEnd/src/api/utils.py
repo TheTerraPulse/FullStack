@@ -1,0 +1,1 @@
+# Funcții auxiliare
