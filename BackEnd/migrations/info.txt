@@ -1,0 +1,1 @@
+# Fișierele de migrare pentru baza de date (folosind Flask-Migrate)
