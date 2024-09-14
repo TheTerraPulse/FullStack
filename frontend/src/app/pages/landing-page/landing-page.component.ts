@@ -38,11 +38,6 @@ export class LandingPageComponent implements OnInit {
         label: 'About us',
         icon: 'pi pi-info-circle',
         route: 'about'
-      },
-      {
-        label: 'Contact',
-        icon: 'pi pi-envelope',
-        route: 'contact'
       }
     ];
 
