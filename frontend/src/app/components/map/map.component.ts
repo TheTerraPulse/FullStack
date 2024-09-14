@@ -19,10 +19,10 @@ export class MapComponent implements OnInit{
     this.customIcon = L.icon({
       iconUrl: 'http://leafletjs.com/examples/custom-icons/leaf-red.png',
       shadowUrl: 'http://leafletjs.com/examples/custom-icons/leaf-shadow.png',
-      iconSize: [25, 41], // Size of the icon
-      iconAnchor: [12, 41], // Anchor point of the icon
-      popupAnchor: [1, -34], // Popup's anchor point
-      shadowSize: [41, 41] // Size of the shadow
+      iconSize: [25, 41],
+      iconAnchor: [12, 41],
+      popupAnchor: [1, -34],
+      shadowSize: [41, 41]
     });
 
     this.configMap();
