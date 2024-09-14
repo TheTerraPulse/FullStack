@@ -10,15 +10,15 @@
                     <i *ngIf="item.items" [ngClass]="['pi', root ? 'pi-angle-down ml-2' : 'pi-angle-right ml-auto']"></i>
                 </a>
             </ng-template>
-            <ng-template pTemplate="end">
-                <div class="flex align-items-center gap-2">
-                    <input type="text" pInputText placeholder="Search" class="w-8rem sm:w-auto">
-                </div>
-            </ng-template>
         </p-menubar>
     </div>
+    <img src="assets/terra.png" alt="Icon" class="circular-icon">
+
 </div>
 
-<div class="changing-text">
-    <h1>{{ currentText }}</h1>
+<div class="hover-text-container">
+    <span class="hover-text">Keeping carbon emissions on track</span> <!-- This text will appear on hover -->
+    <div class="changing-text">
+        <h1>{{ currentText }}</h1>
+    </div>
 </div>
