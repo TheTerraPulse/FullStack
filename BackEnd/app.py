@@ -7,6 +7,14 @@
 # Creează aplicația Flask, inițializează extensiile și înregistrează rutele.
 # Modificați funcția `create_app` pentru a schimba configurațiile aplicației sau pentru a adăuga noi componente.
 
+# app.py
+from dotenv import load_dotenv
+import os
+
+# Specifică calea absolută către fișierul .env
+dotenv_path = os.path.join(os.path.dirname(__file__), '.env')
+load_dotenv(dotenv_path)
+
 
 from flask import Flask
 from flask_migrate import Migrate
