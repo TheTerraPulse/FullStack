@@ -1,0 +1,64 @@
+<div class="navbar-container">
+    <div class="card">
+        <p-menubar class="centered-menubar" [model]="items">
+            <ng-template pTemplate="item" let-item let-root="root">
+                <a [routerLink]="item.route" class="flex align-items-center p-menuitem-link menu-link">
+                    <span [class]="item.icon"></span>
+                    <span class="ml-2">{{ item.label }}</span>
+                    <p-badge *ngIf="item.badge" [ngClass]="{ 'ml-auto': !root, 'ml-2': root }" [value]="item.badge"></p-badge>
+                    <span *ngIf="item.shortcut" class="ml-auto border-1 surface-border border-round surface-100 text-xs p-1">{{ item.shortcut }}</span>
+                    <i *ngIf="item.items" [ngClass]="['pi', root ? 'pi-angle-down ml-2' : 'pi-angle-right ml-auto']"></i>
+                </a>
+            </ng-template>
+        </p-menubar>
+    </div>
+    <img src="assets/terra.png" alt="Icon" class="circular-icon">
+</div>
+
+
+<div class="about-us-content">
+
+    <h1>About Us</h1>
+
+    <!-- Image Section -->
+    <div class="image-grid">
+        <!-- Row 1 -->
+        <div class="image-row">
+            <div class="image-with-text">
+                <img src="assets/pozaAna.jpg" alt="Team Member 1" class="circular-image">
+                <p class="image-caption">Ana</p> <!-- Text below the image -->
+            </div>
+            <div class="image-with-text">
+                <img src="assets/pozaCalin.jpg" alt="Team Member 2" class="circular-image">
+                <p class="image-caption">Calin</p> <!-- Text below the image -->
+            </div>
+            <div class="image-with-text">
+                <img src="assets/pozaAlexandra.jpg" alt="Team Member 3" class="circular-image">
+                <p class="image-caption">Alexandra</p> <!-- Text below the image -->
+            </div>
+        </div>
+
+        <!-- Row 2 -->
+        <div class="image-row">
+            <div class="image-with-text">
+                <img src="assets/pozaAndra.jpg" alt="Team Member 4" class="circular-image">
+                <p class="image-caption">Andra</p> <!-- Text below the image -->
+            </div>
+            <div class="image-with-text">
+                <img src="assets/pozaDarius.jpg" alt="Team Member 5" class="circular-image">
+                <p class="image-caption">Darius</p> <!-- Text below the image -->
+            </div>
+            <div class="image-with-text">
+                <img src="assets/pozaOana.jpg" alt="Team Member 6" class="circular-image">
+                <p class="image-caption">Oana</p> <!-- Text below the image -->
+            </div>
+        </div>
+    </div>
+
+    <p>
+        We are 6 Computer Science students at Babes Bolyiay University, in Cluj-Napoca, who are passionate about saving the planet.
+        
+        Our mission is to track and reduce carbon emissions to save the future.
+        We are committed to sustainable solutions and environmental advocacy to ensure a healthy planet for future generations.
+    </p>
+</div>

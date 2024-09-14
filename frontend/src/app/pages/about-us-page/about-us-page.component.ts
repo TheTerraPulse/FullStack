@@ -5,24 +5,20 @@ import { BadgeModule } from 'primeng/badge';
 import { InputTextModule } from 'primeng/inputtext';
 import { MenubarModule } from 'primeng/menubar';
 import { RippleModule } from 'primeng/ripple';
-import { routes } from '../../app.routes';
 
 @Component({
-  selector: 'landing-page',
+  selector: 'about-us',
   standalone: true,
   imports: [MenubarModule, BadgeModule, AvatarModule, InputTextModule, RippleModule, CommonModule],
-  templateUrl: './landing-page.component.html',
-  styleUrls: ['./landing-page.component.scss']  // Fix here: styleUrls (plural)
+  templateUrl: './about-us-page.component.html',
+  styleUrls: ['./about-us-page.component.scss']
 })
-export class LandingPageComponent implements OnInit {
-  
-  names: string[] = ["Save the PLANET", "Save the FUTURE"];
-  currentText: string = '';  // Properly initialize currentText
+export class AboutUsComponent implements OnInit {
 
   items: any | undefined;
 
   ngOnInit() {
-    // Navbar items
+    // Navbar items - same as landing page
     this.items = [
       { 
         label: 'Home', 
@@ -45,16 +41,5 @@ export class LandingPageComponent implements OnInit {
         route: 'contact' 
       }
     ];
-
-    // Set the initial text
-    this.currentText = this.names[0];
-
-    // Change the text every 5 seconds
-    let index = 0;
-    setInterval(() => {
-      index =  Math.floor(Math.random() * this.names.length);
-      console.log(index);
-      this.currentText = this.names[index];
-    }, 2000);
   }
 }
