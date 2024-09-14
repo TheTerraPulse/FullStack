@@ -2,7 +2,7 @@
     <div class="card">
         <p-menubar class="centered-menubar" [model]="items">
             <ng-template pTemplate="item" let-item let-root="root">
-                <a pRipple class="flex align-items-center p-menuitem-link menu-link">
+                <a [routerLink]="item.route" class="flex align-items-center p-menuitem-link menu-link">
                     <span [class]="item.icon"></span>
                     <span class="ml-2">{{ item.label }}</span>
                     <p-badge *ngIf="item.badge" [ngClass]="{ 'ml-auto': !root, 'ml-2': root }" [value]="item.badge"></p-badge>
@@ -17,8 +17,9 @@
 </div>
 
 <div class="hover-text-container">
-    <span class="hover-text">Keeping carbon emissions on track</span> <!-- This text will appear on hover -->
     <div class="changing-text">
         <h1>{{ currentText }}</h1>
     </div>
+
+    <span class="hover-text">Keeping carbon emissions on track</span> <!-- This text will appear on hover -->
 </div>

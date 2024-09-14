@@ -3,7 +3,7 @@ $background-green: #2e5332;
 ::ng-deep body {
     margin: 0;
     padding: 0;
-    background-image:url(https://naturecanada.ca/wp-content/uploads/2021/04/nbcs-forest-hero-1.png) ;
+    background-image:url(https://149848515.v2.pressablecdn.com/wp-content/uploads/2022/04/titel_Workforce_Transformation_Summit.jpg) ;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -13,7 +13,7 @@ $background-green: #2e5332;
 ::ng-deep .navbar-container {
     margin: 0;
     padding: 0;
-    background-color: $background-green; /* Ensure the background color covers the area */
+    background-color: #338973; /* Ensure the background color covers the area */
 }
 
 ::ng-deep .card {
@@ -49,33 +49,35 @@ body {
 
 }
 
+/* Hover Text Container */
 .hover-text-container {
-    position: relative; /* Relative positioning for child elements */
-    display: inline-block;
-    text-align: center; /* Align everything to the center */
-    width: 100%; /* Full width to ensure it aligns properly */
+    position: relative;
+    text-align: center; /* Center everything */
+    width: 100%; /* Full width to ensure alignment */
+    margin-top: 50px; /* Adjust as needed to add space below "Save the Planet" */
 }
 
+/* The hover text */
 .hover-text {
-    position: absolute;
-    top: 100px; /* Adjust to control the distance above "Save the PLANET" */
-    left: 50%;
-    transform: translateX(-50%);
+    position: relative; /* Position relative to the container */
+    margin-top: 20px; /* Adjust margin to move it below the main text */
     font-size: 30px; /* Adjust the size */
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: $background-green;
+    color: #7ae9cd; /* Same green as background */
     opacity: 0; /* Initially hidden */
     transition: opacity 0.3s ease;
     white-space: nowrap; /* Prevent text from wrapping */
 }
 
+/* Show text on hover */
 .hover-text-container:hover .hover-text {
     opacity: 1; /* Text becomes visible on hover */
 }
 
+/* Main Text Style */
 .changing-text {
     h1 {
-        background-color: $background-green;
+        background-color:#3389738f;
         background-blend-mode: difference;
         padding: 2rem;
         border: 5px white;
@@ -84,5 +86,6 @@ body {
         font-family: Verdana, Geneva, Tahoma, sans-serif;
         text-align: center;
         margin-top: 150px;
+        box-shadow: 0px 0px 20px 20px #57d9b977; /* Add a blurred shadow around the h1 */
     }
 }
