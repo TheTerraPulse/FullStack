@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
+
 @Component({
-  selector: 'app-submit-page',
+  selector: 'submit-page',
   standalone: true,
   imports: [],
   templateUrl: './submit-page.component.html',
@@ -12,6 +13,7 @@ export class SubmitPageComponent {
   constructor(private router : Router){}
 
   goToHomePage(){
-    this.router.navigate(['/']);
+    this.router.navigate([''])
+      .then(r => console.log(r), err => console.log(err));
   }
 }

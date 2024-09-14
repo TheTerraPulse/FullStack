@@ -1,24 +1,29 @@
-<div class="navbar-container">
-    <div class="card">
+<div class="main-container">
+  <div class="page-content">
+    <div class="navbar-container">
+      <div class="card">
         <p-menubar class="centered-menubar" [model]="items">
-            <ng-template pTemplate="item" let-item let-root="root">
-                <a pRipple class="flex align-items-center p-menuitem-link menu-link">
-                    <span [class]="item.icon"></span>
-                    <span class="ml-2">{{ item.label }}</span>
-                    <p-badge *ngIf="item.badge" [ngClass]="{ 'ml-auto': !root, 'ml-2': root }" [value]="item.badge"></p-badge>
-                    <span *ngIf="item.shortcut" class="ml-auto border-1 surface-border border-round surface-100 text-xs p-1">{{ item.shortcut }}</span>
-                    <i *ngIf="item.items" [ngClass]="['pi', root ? 'pi-angle-down ml-2' : 'pi-angle-right ml-auto']"></i>
-                </a>
-            </ng-template>
+          <ng-template pTemplate="item" let-item let-root="root">
+            <a pRipple class="flex align-items-center p-menuitem-link menu-link">
+              <span [class]="item.icon"></span>
+              <span class="ml-2">{{ item.label }}</span>
+              <p-badge *ngIf="item.badge" [ngClass]="{ 'ml-auto': !root, 'ml-2': root }" [value]="item.badge"></p-badge>
+              <span *ngIf="item.shortcut" class="ml-auto border-1 surface-border border-round surface-100 text-xs p-1">{{ item.shortcut }}</span>
+              <i *ngIf="item.items" [ngClass]="['pi', root ? 'pi-angle-down ml-2' : 'pi-angle-right ml-auto']"></i>
+            </a>
+          </ng-template>
         </p-menubar>
+      </div>
+      <img src="assets/terra.png" alt="Icon" class="circular-icon">
+
     </div>
-    <img src="assets/terra.png" alt="Icon" class="circular-icon">
 
-</div>
-
-<div class="hover-text-container">
-    <span class="hover-text">Keeping carbon emissions on track</span> <!-- This text will appear on hover -->
-    <div class="changing-text">
+    <div class="hover-text-container">
+      <span class="hover-text">Keeping carbon emissions on track</span> <!-- This text will appear on hover -->
+      <div class="changing-text">
         <h1>{{ currentText }}</h1>
+      </div>
     </div>
+  </div>
+  <app-footer></app-footer>
 </div>

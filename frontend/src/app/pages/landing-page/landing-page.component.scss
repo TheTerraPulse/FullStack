@@ -86,3 +86,11 @@ body {
         margin-top: 150px;
     }
 }
+
+.main-container {
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}

@@ -5,16 +5,17 @@ import { BadgeModule } from 'primeng/badge';
 import { InputTextModule } from 'primeng/inputtext';
 import { MenubarModule } from 'primeng/menubar';
 import { RippleModule } from 'primeng/ripple';
+import {FooterComponent} from "../../components/footer/footer.component";
 
 @Component({
   selector: 'landing-page',
   standalone: true,
-  imports: [MenubarModule, BadgeModule, AvatarModule, InputTextModule, RippleModule, CommonModule],
+  imports: [MenubarModule, BadgeModule, AvatarModule, InputTextModule, RippleModule, CommonModule, FooterComponent],
   templateUrl: './landing-page.component.html',
   styleUrls: ['./landing-page.component.scss']  // Fix here: styleUrls (plural)
 })
 export class LandingPageComponent implements OnInit {
-  
+
   names: string[] = ["Save the PLANET", "Save the FUTURE"];
   currentText: string = '';  // Properly initialize currentText
 
