@@ -10,5 +10,5 @@ import {MapComponent} from "./components/map/map.component";
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'frontend';
+  title = 'TerraPulse';
 }
