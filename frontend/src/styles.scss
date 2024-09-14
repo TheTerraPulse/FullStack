@@ -1,1 +1,6 @@
 @import "primeicons/primeicons.css";
+
+::ng-deep html {
+    margin: 0;
+    padding: 0;
+}
