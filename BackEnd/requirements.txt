@@ -1,0 +1,13 @@
+# Biblioteci necesare
+Flask
+Flask-SQLAlchemy
+Flask-Migrate
+python-dotenv
+
+# USE 
+
+#pip install -r BackEnd/requirements.txt 
+                #or 
+#pip3 install -r BackEnd/requirements.txt
+
+#please make sure before commiting to delete pycache
