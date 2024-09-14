@@ -58,3 +58,30 @@ def fetch_copernicus_data():
             return {"error": f"Failed to fetch data from Copernicus API: {response.status_code}"}
     except Exception as e:
         return {"error": f"Exception occurred: {str(e)}"}
+    
+
+    # New function for Carbon Interface API
+def fetch_carbon_data():
+    api_key = current_app.config['CARBON_API_KEY']
+    url = "https://www.carboninterface.com/api/v1/auth"  # Example endpoint for authentication
+
+    headers = {
+        'Authorization': f'Bearer {api_key}',
+        'Content-Type': 'application/json'
+    }
+
+    print(f"Using API Key: {api_key}")  # Debugging print
+    print(f"Request headers: {headers}")  # Debugging print
+
+    try:
+        response = requests.get(url, headers=headers)
+        print(f"Response status code: {response.status_code}")  # Debugging print
+        print(f"Response text: {response.text}")  # Debugging print
+        if response.status_code == 200:
+            return {"message": "Auth successful", "data": response.json()}
+        else:
+            return {"error": f"Failed to authenticate with Carbon Interface API: {response.status_code}"}
+    except Exception as e:
+        return {"error": f"Exception occurred: {str(e)}"}
+
+

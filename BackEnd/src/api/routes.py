@@ -18,7 +18,7 @@ from datetime import datetime
 from .models import db, User  # Import db and User from models
 print("Importing fetch_copernicus_data from utils.py...")
 
-from .utils import fetch_copernicus_data
+from .utils import fetch_copernicus_data, fetch_carbon_data
 
 routes = Blueprint('routes', __name__)
 
@@ -54,6 +54,15 @@ def get_users():
 def get_copernicus_data():
     try:
         data = fetch_copernicus_data()
+        return jsonify(data)
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+    
+# New route for Carbon Interface API
+@routes.route('/carbon_data')
+def get_carbon_data():
+    try:
+        data = fetch_carbon_data()
         return jsonify(data)
     except Exception as e:
         return jsonify({"error": str(e)}), 500
