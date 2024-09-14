@@ -3,6 +3,8 @@ Flask
 Flask-SQLAlchemy
 Flask-Migrate
 python-dotenv
+request 
+requests-oauthlib
 
 # USE 
 

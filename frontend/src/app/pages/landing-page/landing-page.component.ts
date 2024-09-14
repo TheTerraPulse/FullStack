@@ -24,10 +24,26 @@ export class LandingPageComponent implements OnInit {
   ngOnInit() {
     // Navbar items
     this.items = [
-      { label: 'Home', icon: 'pi pi-home' },
-      { label: 'File a form', icon: 'pi pi-book' },
-      { label: 'About us', icon: 'pi pi-info-circle' },
-      { label: 'Contact', icon: 'pi pi-envelope' }
+      {
+        label: 'Home',
+        icon: 'pi pi-home',
+        route: ''
+      },
+      {
+        label: 'File a form',
+        icon: 'pi pi-book',
+        route: 'report'
+      },
+      {
+        label: 'About us',
+        icon: 'pi pi-info-circle',
+        route: 'about'
+      },
+      {
+        label: 'Contact',
+        icon: 'pi pi-envelope',
+        route: 'contact'
+      }
     ];
 
     // Set the initial text

@@ -8,10 +8,17 @@
 # Fiecare rută este legată de o funcție specifică ce definește logica pentru gestionarea cererilor.
 
 
+# src/api/routes.py
+
+
+
 
 from flask import Blueprint, jsonify
 from datetime import datetime
 from .models import db, User  # Import db and User from models
+print("Importing fetch_copernicus_data from utils.py...")
+
+from .utils import fetch_copernicus_data, fetch_carbon_data
 
 routes = Blueprint('routes', __name__)
 
@@ -42,6 +49,24 @@ def get_users():
         {"username": user.username, "email": user.email, "registered_on": user.registered_on}
         for user in users
     ])
+
+@routes.route('/copernicus_data')
+def get_copernicus_data():
+    try:
+        data = fetch_copernicus_data()
+        return jsonify(data)
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+    
+# New route for Carbon Interface API
+@routes.route('/carbon_data')
+def get_carbon_data():
+    try:
+        data = fetch_carbon_data()
+        return jsonify(data)
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
 
 @routes.route('/')
 def home():

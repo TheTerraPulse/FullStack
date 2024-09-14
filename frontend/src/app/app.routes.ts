@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import {LandingPageComponent} from "./pages/landing-page/landing-page.component";
-import {SubmitPageComponent} from "./pages/submit-page/submit-page.component";
+import { LandingPageComponent } from "./pages/landing-page/landing-page.component";
+import { SubmitPageComponent } from "./pages/submit-page/submit-page.component";
+import { AboutUsComponent } from './pages/about-us-page/about-us-page.component';
 
 export const routes: Routes = [
   {
@@ -11,7 +12,11 @@ export const routes: Routes = [
   {
     path: 'submit-page',
     component: SubmitPageComponent
-  }
+  },
+  {
+    path: 'about',
+    component: AboutUsComponent
+  },
 ];
 
 @NgModule({
