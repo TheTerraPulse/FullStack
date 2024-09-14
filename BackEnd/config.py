@@ -17,4 +17,5 @@ class Config:
     COPERNICUS_API_KEY = os.getenv('COPERNICUS_API_KEY')
     CLIENT_ID = os.getenv('CLIENT_ID')
     CLIENT_SECRET = os.getenv('CLIENT_SECRET')
+    CARBON_API_KEY = os.getenv('CARBON_API_KEY')
 
