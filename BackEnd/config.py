@@ -1,4 +1,10 @@
-# Configurații generale (bază de date, chei API)
+# config.py
+# This file contains the configuration settings for the Flask application.
+# Modify the configuration values here to change the behavior of the application, such as the database URI.
+
+# Acest fișier conține setările de configurare pentru aplicația Flask.
+# Modificați valorile de configurare de aici pentru a schimba comportamentul aplicației, cum ar fi URI-ul bazei de date.
+
 
 import os
 
