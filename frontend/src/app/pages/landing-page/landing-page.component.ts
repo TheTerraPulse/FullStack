@@ -5,14 +5,14 @@ import { BadgeModule } from 'primeng/badge';
 import { InputTextModule } from 'primeng/inputtext';
 import { MenubarModule } from 'primeng/menubar';
 import { RippleModule } from 'primeng/ripple';
-import {MapComponent} from "../../components/map/map.component";
-import {Button, ButtonModule} from "primeng/button";
-import {FileUploadModule} from "primeng/fileupload";
-import {MessageService} from "primeng/api";
-import {ToastModule} from "primeng/toast";
-import {DataTableComponent} from "../../components/data-table/data-table.component";
-import {EmissionData} from "../../types/EmissionData";
-import {Router} from "@angular/router";
+import { MapComponent } from "../../components/map/map.component";
+import { Button } from "primeng/button";
+import { FileUploadModule } from "primeng/fileupload";
+import { MessageService } from "primeng/api";
+import { ToastModule } from "primeng/toast";
+import { DataTableComponent } from "../../components/data-table/data-table.component";
+import { EmissionData } from "../../types/EmissionData";
+import { Router } from "@angular/router";
 
 @Component({
   selector: 'landing-page',
@@ -133,7 +133,7 @@ export class LandingPageComponent implements OnInit {
       {
         station: "VL2",
         pollutant: "SO2",
-        dailyMaximum: 30.09,
+        dailyMaximum: 25.53,
         annualAverage: 8.77,
         measurementUnit: "µg/m3",
         limitValue: "125µg/m3(/24h)"
