@@ -20,8 +20,7 @@ export class MapComponent implements OnInit{
 
   ngOnInit() {
     this.customIcon = L.icon({
-      iconUrl: 'http://leafletjs.com/examples/custom-icons/leaf-red.png',
-      shadowUrl: 'http://leafletjs.com/examples/custom-icons/leaf-shadow.png',
+      iconUrl: 'http://leafletjs.com/examples/custom-icons/leaf-green.png',
       iconSize: [25, 41],
       iconAnchor: [12, 41],
       popupAnchor: [1, -34],
@@ -31,8 +30,8 @@ export class MapComponent implements OnInit{
     this.configMap();
     this.map.on("click", (e: L.LeafletMouseEvent)=> {
       const coordinates = e.latlng;
+      setTimeout(() => this.isMarkerPlaced.emit(true), 1000);
       this.addMarker(coordinates);
-      this.isMarkerPlaced.emit(true);
     })
   }
 
@@ -42,10 +41,17 @@ export class MapComponent implements OnInit{
       zoom: 4,
     })
 
-    L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
-      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
-      maxZoom: 19
+    // L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+    //   attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+    //   subdomains: 'abcd',
+    //   maxZoom: 19
+    // }).addTo(this.map);
+
+    L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}', {
+      attribution: '&copy; <a href="https://www.esri.com">Esri</a> &mdash; Esri, DeLorme, NAVTEQ',
+      maxZoom: 8
     }).addTo(this.map);
+
   }
 
   addMarker(latlng: L.LatLng) {

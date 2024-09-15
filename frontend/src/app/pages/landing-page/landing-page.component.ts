@@ -98,8 +98,8 @@ export class LandingPageComponent implements OnInit {
       {
         station: "VL2",
         pollutant: "CO",
-        dailyMaximum: 1.65,
-        annualAverage: 0.47,
+        dailyMaximum: 1.77,
+        annualAverage: 0.61,
         measurementUnit: "mg/m^3",
         limitValue: "10mg/m^3(/8h)"
       },
