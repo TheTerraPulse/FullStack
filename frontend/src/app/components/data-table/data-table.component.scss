@@ -1,0 +1,14 @@
+::ng-deep .p-datatable-table {
+  border: 10px solid #57d9b977;
+}
+
+.table-container {
+  h1 {
+    color: white;
+    font-size: large;
+  }
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

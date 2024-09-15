@@ -1,0 +1,26 @@
+<div class="table-container">
+  <h1>{{tableTitle}}</h1>
+  <p-table [value]="currentData" [tableStyle]="{ 'width': '10rem' }">
+    <ng-template pTemplate="header">
+      <tr>
+        <th>Station</th>
+        <th>Pollutant</th>
+        <th>Daily Maximum</th>
+        <th>Annual Average</th>
+        <th>Unit of Measurement</th>
+        <th>Limit Value</th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-entry>
+      <tr>
+        <td>{{ entry.station }}</td>
+        <td>{{ entry.pollutant }}</td>
+        <td>{{ entry.dailyMaximum }}</td>
+        <td>{{ entry.annualAverage }}</td>
+        <td>{{ entry.measurementUnit }}</td>
+        <td>{{ entry.limitValue }}</td>
+      </tr>
+    </ng-template>
+  </p-table>
+
+</div>

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import * as L from 'leaflet';
 
 @Component({
@@ -12,6 +12,9 @@ export class MapComponent implements OnInit{
   private map!: L.Map;
   private currentMarker!: L.Marker;
   private customIcon!: L.Icon;
+
+  @Output()
+  public isMarkerPlaced: EventEmitter<boolean> = new EventEmitter(false);
 
   constructor() { }
 
@@ -28,8 +31,8 @@ export class MapComponent implements OnInit{
     this.configMap();
     this.map.on("click", (e: L.LeafletMouseEvent)=> {
       const coordinates = e.latlng;
-      console.log(coordinates)
       this.addMarker(coordinates);
+      this.isMarkerPlaced.emit(true);
     })
   }
 
@@ -39,8 +42,9 @@ export class MapComponent implements OnInit{
       zoom: 4,
     })
 
-    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+      maxZoom: 19
     }).addTo(this.map);
   }
 
