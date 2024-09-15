@@ -20,25 +20,20 @@ export class AboutUsComponent implements OnInit {
   ngOnInit() {
     // Navbar items - same as landing page
     this.items = [
-      { 
-        label: 'Home', 
+      {
+        label: 'Home',
         icon: 'pi pi-home',
-        route: '' 
+        route: ''
       },
-      { 
-        label: 'File a form', 
-        icon: 'pi pi-book',
-        route: 'report'
-      },
-      { 
-        label: 'About us', 
+      {
+        label: 'About us',
         icon: 'pi pi-info-circle',
-        route: 'about' 
+        route: 'about'
       },
-      { 
-        label: 'Contact', 
+      {
+        label: 'Contact',
         icon: 'pi pi-envelope',
-        route: 'contact' 
+        route: 'contact'
       }
     ];
   }

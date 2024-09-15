@@ -1,9 +1,9 @@
-$background-green: #2e5332;
+$main-green: #338973;
 
 ::ng-deep body {
     margin: 0;
     padding: 0;
-    background-image:url(https://149848515.v2.pressablecdn.com/wp-content/uploads/2022/04/titel_Workforce_Transformation_Summit.jpg) ;
+    background-image: url(https://149848515.v2.pressablecdn.com/wp-content/uploads/2022/04/titel_Workforce_Transformation_Summit.jpg) ;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -13,7 +13,7 @@ $background-green: #2e5332;
 ::ng-deep .navbar-container {
     margin: 0;
     padding: 0;
-    background-color: #338973; /* Ensure the background color covers the area */
+    background-color: $main-green; /* Ensure the background color covers the area */
 }
 
 ::ng-deep .card {
@@ -77,7 +77,7 @@ body {
 /* Main Text Style */
 .changing-text {
     h1 {
-        background-color:#3389738f;
+        background-color: $main-green;
         background-blend-mode: difference;
         padding: 2rem;
         border: 5px white;
@@ -86,6 +86,41 @@ body {
         font-family: Verdana, Geneva, Tahoma, sans-serif;
         text-align: center;
         margin-top: 150px;
-        box-shadow: 0px 0px 20px 20px #57d9b977; /* Add a blurred shadow around the h1 */
+        box-shadow: 0px 0px 20px 20px $main-green; /* Add a blurred shadow around the h1 */
     }
+}
+
+.main-container {
+  margin: 1rem;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}
+
+.map-section {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.util-button-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.data-section {
+  width: 50%;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  gap: 5rem;
+}
+
+::ng-deep .p-button {
+  background-color: $main-green;
+  border-color: $main-green;
 }

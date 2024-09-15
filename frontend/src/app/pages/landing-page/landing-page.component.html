@@ -13,13 +13,30 @@
         </p-menubar>
     </div>
     <img src="assets/terra.png" alt="Icon" class="circular-icon">
-
 </div>
-
-<div class="hover-text-container">
-    <div class="changing-text">
-        <h1>{{ currentText }}</h1>
+<div class="main-container">
+  <div class="map-section">
+    <app-map #map (isMarkerPlaced)="handleEvent($event)"></app-map>
+    <div class="util-button-container">
+      <p-toast/>
+      <p-fileUpload
+        mode="basic"
+        chooseLabel="Choose"
+        chooseIcon="pi pi-upload"
+        name="demo[]"
+        accept="image/*"
+        maxFileSize="1000000"
+        (onSelect)="uploadReport($event)"/>
+      <p-button
+        label="Analyze"
+        icon="pi pi-check"
+        iconPos="right"
+        [loading]="isButtonLoading"
+        (onClick)="load()"/>
     </div>
-
-    <span class="hover-text">Keeping carbon emissions on track</span> <!-- This text will appear on hover -->
+  </div>
+  <div class="data-section">
+    <data-table #official [tableTitle]="'Our Report:'" [emissionData]="officialReport"></data-table>
+    <data-table #firm [tableTitle]= "'Submitted Report:'" [emissionData]="firmReport"></data-table>
+  </div>
 </div>
