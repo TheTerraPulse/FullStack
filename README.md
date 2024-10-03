@@ -1,24 +1,72 @@
-# Project setup
-### Git Flow (OPTIONAL)
-Git Flow is a popular Git branching strategy aimed at simplifying release management. 
+# Carbon Emissions & Fraud Monitoring Platform
+<br/>
+<div class="badges-gif">
+  <p align="right">
+    <img src="https://i.imgur.com/YOh3hiv.gif" width=100% align=center alt=TerraPulse-Demo>
+    <br><br>
+  </p>
+</div>
 
-1. Install Git Flow
-   - **Windows:** Git Flow is included in the Git for Windows distribution
-   - **MacOS:** Use Homebrew with 'brew install git-flow-avh'.
-   - **Linux:** Use apt or yum depending on your distribution, e.g., 'sudo apt-get install git-flow'.
-  
-2. Install the Git Flow extension by Sergey Romanov
-3. Initialize Git Flow in your repository
-   - Navigate to your repository
-   - Open the terminal and run 'git flow init'
-   - You are asked which names the branches should be assigned, you can press enter until finished
-4. For further information how to create branches and merge, ask @Fabio Di Frisco
+<table>
+  <tr>
+    <th>Successful Report</th>
+    <th>Detected Discrepancy</th>
+  </tr>
+  <tr>
+    <td><img src="https://i.imgur.com/yZpajXO.jpeg" alt="Success" style="width:100%; "></td>
+    <td><img src="https://i.imgur.com/Xp6m1qm.jpeg" alt="Discrepancy" style="width:100%;"></td>
+  </tr>
+</table>
 
+# TerraPulse: Carbon Emissions Monitoring Platform
 
-### Create .venv and install dependencies
-A virtual environment in the context of Python development is a self-contained directory that contains a Python installation for a particular version of Python, plus a number of additional packages.
+## Table of Contents
 
-1. Create a virtual environment by running 'python -m venv .venv' in your repository
-2. To activate the venv run 'source .venv/bin/activate' (on Linux / macOS) or .venv\Scripts\Activate.ps1 (on Windows)
-3. To install all packages run 'pip install -r requirements.txt'
-4. For step 3., make sure you check the torch and torchvision version/installation you need to use such that it is compatible with your device and the nnUnet framework
+1. [Description](#description)
+2. [Setup Instructions](#setup-instructions)
+3. [How to use our platform](#how-to-use-our-platform)
+6. [Known Issues](#known-issues)
+
+## Description
+
+The TerraPulse platform focuses on Monitoring and Reporting on Carbon Emissions by combining real-time satellite data from the Copernicus Sentinel-5P with transaction-based emission estimates from the Carbon Interface API. Our mission is to provide an integrated view of carbon footprints for governments, organizations, and individuals, helping them make data-driven decisions to reduce their carbon emissions and foster a more sustainable future.
+
+By tackling the issue of fragmented and inaccessible emission data, TerraPulse aggregates data from these two critical sources, offering an easy-to-use platform to track emissions across various regions and understand their climate impact.
+
+## Setup Instructions
+
+1. **Clone the repository**:
+   
+   ```bash
+   git clone https://github.com/your-repo/TerraPulse.git
+
+2. **Install the required dependencies**:
+   
+   ```bash
+   pip install -r requirements.txt
+
+2. **Set up your API keys**:
+   
+   [Copernicus Sentinel-5P API](https://www.copernicus.eu/en)
+   <br/>
+   [Carbon Interface API](https://docs.carboninterface.com/#/)
+   
+## How to use our platform
+```
+ Dashboard: Access real-time carbon emission data from Copernicus Sentinel-5P and Carbon Interface API.
+```
+```
+ Region Selection: Select regions on the map to view specific emissions data.
+```
+```
+ Filter Data: Filter emissions by gas type (CO₂, SO₂, etc.).
+```
+```
+ Export Reports: Generate and export reports for specific regions or gas types.
+```
+## Known Issues
+
+**API Delays:** Occasional lags when retrieving data due to high traffic on the Carbon Interface API.
+<br/>
+**Compatibility:** New Python versions are under testing; older versions are recommended for stability.
+
