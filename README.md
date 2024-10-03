@@ -18,8 +18,6 @@
   </tr>
 </table>
 
-# TerraPulse: Carbon Emissions Monitoring Platform
-
 ## Table of Contents
 
 1. [Description](#description)
